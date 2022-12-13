@@ -1,5 +1,5 @@
-//use std::thread;
-//use std::time::Duration;
+use std::thread;
+use std::time::Duration;
 
 #[repr(C)]
 /// struct of bit_settings
@@ -14,9 +14,10 @@ pub struct bit_settings {
 #[no_mangle]
 pub extern "C" fn bittenEnginePatch(settings: *mut bit_settings) {
 	unsafe {
+        thread::sleep(Duration::from_millis(10)); // sleep 10 millis
 	    (*settings).width=900; // show that it worked
         (*settings).silent=false; // get rid of modded text
-        
+        (*settings).modded=false; // set modded to false
 	}
     let text=format!("Bitten engine patching worked.\nvalue of settings.width {}", unsafe{(*settings).width});
     println!("{}", text);
