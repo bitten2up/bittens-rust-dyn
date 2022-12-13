@@ -11,3 +11,4 @@ crate-type = ["cdylib"]
 
 [dependencies]
 cty = "0.2.2"
+vsprintf = "2.0.0"
