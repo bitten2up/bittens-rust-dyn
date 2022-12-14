@@ -5,10 +5,10 @@ edition = "2021"
 
 [lib]
 name = "bittenrustdll"
-crate-type = ["cdylib"] 
+crate-type = ["cdylib"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 cty = "0.2.2"
-vsprintf = "2.0.0"
+regex = "1"
